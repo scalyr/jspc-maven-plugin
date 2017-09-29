@@ -25,7 +25,7 @@
     </parent>
     
     <modelVersion>4.0.0</modelVersion>
-    <groupId>org.jasig.mojo.jspc</groupId>
+    <groupId>com.scalyr.mojo.jspc</groupId>
     <artifactId>jspc</artifactId>
     <packaging>pom</packaging>
     <version>2.0.3-SNAPSHOT</version>
@@ -36,12 +36,33 @@
     <url>http://mojo.codehaus.org/jspc</url>
     
     <scm>
-        <connection>scm:git:git://github.com/Jasig/jspc-maven-plugin.git</connection>
-        <developerConnection>scm:git:git@github.com:Jasig/jspc-maven-plugin.git</developerConnection>
-        <url>https://github.com/Jasig/jspc-maven-plugin</url>
-      <tag>HEAD</tag>
-  </scm>
-    
+        <connection>scm:git:git://github.com/scalyr/jspc-maven-plugin.git</connection>
+        <developerConnection>scm:git:git@github.com:scalyr/jspc-maven-plugin.git</developerConnection>
+        <url>https://github.com/scalyr/jspc-maven-plugin</url>
+        <tag>HEAD</tag>
+    </scm>
+
+    <repositories>
+        <repository>
+            <id>scalyr-all</id>
+            <name>Scalyr Artifactory</name>
+            <url>http://maven.scalyr.net/all</url>
+        </repository>
+    </repositories>
+
+    <distributionManagement>
+        <repository>
+            <id>scalyr-plugins-release</id>
+            <name>Scalyr Artifactory (Plugin Releases)</name>
+            <url>http://maven.scalyr.net/artifactory/plugins-release-local</url>
+        </repository>
+        <snapshotRepository>
+            <id>scalyr-plugins-snapshot</id>
+            <name>Scalyr Artifactory (Plugin Snapshots)</name>
+            <url>http://maven.scalyr.net/artifactory/plugins-snapshot-local</url>
+        </snapshotRepository>
+    </distributionManagement>
+
     <developers>
         <developer>
             <name>Jeff Genender</name>
